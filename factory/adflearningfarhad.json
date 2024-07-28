@@ -1,0 +1,9 @@
+{
+	"name": "adflearningfarhad",
+	"location": "swedencentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6c4975e6-3712-49f4-801b-19ae41e0439c",
+		"tenantId": "9629499e-da37-4bf6-8364-844cab6994eb"
+	}
+}
