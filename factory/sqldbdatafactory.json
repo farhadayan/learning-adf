@@ -1,0 +1,9 @@
+{
+	"name": "sqldbdatafactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0f73b92c-8d2f-46cd-af3b-2a4b4c6b0efd",
+		"tenantId": "9629499e-da37-4bf6-8364-844cab6994eb"
+	}
+}
