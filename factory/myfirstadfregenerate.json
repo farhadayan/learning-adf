@@ -1,0 +1,9 @@
+{
+	"name": "myfirstadfregenerate",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6ffc1250-9c4f-4938-a6f9-1f087c75c5c7",
+		"tenantId": "9629499e-da37-4bf6-8364-844cab6994eb"
+	}
+}
