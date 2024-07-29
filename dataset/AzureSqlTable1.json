@@ -10,17 +10,52 @@
 		"schema": [
 			{
 				"name": "name",
-				"type": "nvarchar"
+				"type": "varchar"
 			},
 			{
-				"name": "code",
-				"type": "int",
-				"precision": 10
+				"name": "alpha_2",
+				"type": "varchar"
+			},
+			{
+				"name": "alpha_3",
+				"type": "varchar"
+			},
+			{
+				"name": "country_code",
+				"type": "varchar"
+			},
+			{
+				"name": "iso_3166_2",
+				"type": "varchar"
+			},
+			{
+				"name": "region",
+				"type": "varchar"
+			},
+			{
+				"name": "sub_region",
+				"type": "varchar"
+			},
+			{
+				"name": "intermediate_region",
+				"type": "varchar"
+			},
+			{
+				"name": "region_code",
+				"type": "varchar"
+			},
+			{
+				"name": "sub_region_code",
+				"type": "varchar"
+			},
+			{
+				"name": "intermediate_region_code",
+				"type": "varchar"
 			}
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "SourceCountries"
+			"table": "CountriesCSV"
 		}
 	}
 }

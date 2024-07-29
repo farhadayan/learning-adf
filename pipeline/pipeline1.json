@@ -20,7 +20,7 @@
 					},
 					{
 						"name": "Destination",
-						"value": "dbo.TransformedCountries"
+						"value": "dbo.CountriesCSV"
 					}
 				],
 				"typeProperties": {
@@ -58,7 +58,31 @@
 								"sink": {
 									"name": "name",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "alpha-2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "alpha_2",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "alpha-3",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "alpha_3",
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -68,9 +92,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "code",
-									"type": "Int32",
-									"physicalType": "int"
+									"name": "country_code",
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							}
 						],
@@ -83,7 +107,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "countrieslistCSV",
 						"type": "DatasetReference"
 					}
 				],
