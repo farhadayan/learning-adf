@@ -1,0 +1,37 @@
+{
+	"name": "dataflow2",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          name as string,",
+				"          {alpha-2} as string,",
+				"          {alpha-3} as string,",
+				"          {country-code} as string,",
+				"          {iso_3166-2} as string,",
+				"          region as string,",
+				"          {sub-region} as string,",
+				"          {intermediate-region} as string,",
+				"          {region-code} as string,",
+				"          {sub-region-code} as string,",
+				"          {intermediate-region-code} as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1"
+			]
+		}
+	}
+}
