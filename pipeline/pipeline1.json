@@ -44,7 +44,6 @@
 					},
 					"enableStaging": false,
 					"parallelCopies": 1,
-					"validateDataConsistency": false,
 					"dataIntegrationUnits": 4,
 					"translator": {
 						"type": "TabularTranslator",
@@ -107,7 +106,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "countrieslistCSV",
 						"type": "DatasetReference"
 					}
 				],
