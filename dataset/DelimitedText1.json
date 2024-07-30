@@ -11,8 +11,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "country_full.csv",
-				"folderPath": "input",
-				"container": "datafactory"
+				"container": "input"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -25,19 +24,19 @@
 				"type": "String"
 			},
 			{
-				"name": "alpha-2",
+				"name": "alpha_2",
 				"type": "String"
 			},
 			{
-				"name": "alpha-3",
+				"name": "alpha_3",
 				"type": "String"
 			},
 			{
-				"name": "country-code",
+				"name": "country_code",
 				"type": "String"
 			},
 			{
-				"name": "iso_3166-2",
+				"name": "iso_3166_2",
 				"type": "String"
 			},
 			{
@@ -45,23 +44,23 @@
 				"type": "String"
 			},
 			{
-				"name": "sub-region",
+				"name": "sub_region",
 				"type": "String"
 			},
 			{
-				"name": "intermediate-region",
+				"name": "intermediate_region",
 				"type": "String"
 			},
 			{
-				"name": "region-code",
+				"name": "region_code",
 				"type": "String"
 			},
 			{
-				"name": "sub-region-code",
+				"name": "sub_region_code",
 				"type": "String"
 			},
 			{
-				"name": "intermediate-region-code",
+				"name": "intermediate_region_code",
 				"type": "String"
 			}
 		]
