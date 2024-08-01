@@ -1,0 +1,72 @@
+{
+	"name": "dataflow2",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "countrieslistCSV",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"name": "filterbycode"
+				}
+			],
+			"transformations": [
+				{
+					"name": "countrycodecast"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          name as string,",
+				"          {alpha-2} as string,",
+				"          {alpha-3} as string,",
+				"          {country-code} as string,",
+				"          {iso_3166-2} as string,",
+				"          region as string,",
+				"          {sub-region} as string,",
+				"          {intermediate-region} as string,",
+				"          {region-code} as string,",
+				"          {sub-region-code} as string,",
+				"          {intermediate-region-code} as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     partitionBy('hash', 1)) ~> source1",
+				"source1 cast(output(",
+				"          {country-code} as integer '000'",
+				"     ),",
+				"     errors: true) ~> countrycodecast",
+				"countrycodecast sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          name as string,",
+				"          alpha_2 as string,",
+				"          alpha_3 as string,",
+				"          country_code as string,",
+				"          iso_3166_2 as string,",
+				"          region as string,",
+				"          sub_region as string,",
+				"          intermediate_region as string,",
+				"          region_code as string,",
+				"          sub_region_code as string,",
+				"          intermediate_region_code as string",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> filterbycode"
+			]
+		}
+	}
+}
